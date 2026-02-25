@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Arch In</title>
+  <meta name="description" content="Contact Arch In for architecture, interior and construction projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo"><img src="assets/img/arch_in.jpg" alt="Arch In logo" class="logo"></a>
+      <ul class="nav__menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="process.html" class="nav__link">Process</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="contact.html" class="nav__link active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero hero--contact hero--sub">
+    <div class="container hero__content">
+      <span class="hero__eyebrow">Contact Us</span>
+      <h1 class="hero__title">Start Your Project Discussion</h1>
+      <p class="hero__text">Share your requirements and our team will respond with a suitable next-step plan.</p>
+    </div>
+  </section>
+
+  <section class="contact-main section">
+    <div class="container contact__grid">
+      <div class="contact__form-section">
+        <h2>Request Consultation</h2>
+        <form class="contact__form" action="#" method="post">
+          <div class="form__group"><input type="text" name="name" placeholder="Full Name" required></div>
+          <div class="form__row">
+            <div class="form__group"><input type="tel" name="phone" placeholder="Phone Number" required></div>
+            <div class="form__group"><input type="email" name="email" placeholder="Email"></div>
+          </div>
+          <div class="form__group"><input type="text" name="location" placeholder="Project Location" required></div>
+          <div class="form__group">
+            <select name="project_type" required>
+              <option value="">Project Type</option>
+              <option value="architecture">Architecture</option>
+              <option value="interiors">Interior Design</option>
+              <option value="construction">Construction</option>
+              <option value="renovation">Renovation</option>
+            </select>
+          </div>
+          <div class="form__group"><textarea name="message" rows="5" placeholder="Project brief"></textarea></div>
+          <button type="submit" class="btn btn--primary btn--full">Send Enquiry</button>
+        </form>
+      </div>
+
+      <div class="contact__info">
+        <article class="contact__item">
+          <div class="contact__icon">PH</div>
+          <div>
+            <h3>Phone</h3>
+            <a class="contact__link" href="tel:+919876543210">+91 98765 43210</a>
+            <p>Monday to Saturday, 9:00 AM - 7:00 PM</p>
+          </div>
+        </article>
+        <article class="contact__item">
+          <div class="contact__icon">EM</div>
+          <div>
+            <h3>Email</h3>
+            <a class="contact__link" href="mailto:hello@archin.in">hello@archin.in</a>
+          </div>
+        </article>
+        <article class="contact__item">
+          <div class="contact__icon">OF</div>
+          <div>
+            <h3>Office</h3>
+            <p>Arch In Studio, MG Road, Kochi, Kerala</p>
+          </div>
+        </article>
+        <article class="contact__item">
+          <div class="contact__icon">SM</div>
+          <div>
+            <h3>Social</h3>
+            <div class="social__links">
+              <a href="#" class="social__link">Instagram</a>
+              <a href="#" class="social__link">Facebook</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alternate-bg">
+    <div class="container">
+      <h2 class="section__title">Visit Our Studio</h2>
+      <p class="section__lead">We also support on-site meetings at your project location.</p>
+      <div id="map" class="map-container"></div>
+    </div>
+  </section>
+
+  <section class="cta section">
+    <div class="container">
+      <h2>Need immediate support for an active project?</h2>
+      <a href="tel:+919876543210" class="btn btn--primary">Call Now</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <img src="assets/img/arch_in.jpg" alt="Arch In logo" class="logo">
+          <p>Architecture, interior design and construction for modern spaces.</p>
+        </div>
+        <div class="footer__section">
+          <h3>Contact</h3>
+          <p>Phone: +91 98765 43210</p>
+          <p>Email: hello@archin.in</p>
+        </div>
+        <div class="footer__section">
+          <h3>Quick Links</h3>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2026 Arch In. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    setTimeout(function () {
+      var map = L.map('map').setView([9.9816, 76.2999], 12);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+      L.marker([9.9816, 76.2999]).addTo(map).bindPopup('Arch In Studio, Kochi').openPopup();
+    }, 150);
+  </script>
+</body>
+</html>
