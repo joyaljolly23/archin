@@ -9,13 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
   <header class="header">
     <nav class="nav container">
-      <a href="index.html" class="nav__logo"><img src="assets/img/arch_in.jpg" alt="Arch In logo" class="logo"></a>
-      <ul class="nav__menu">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav__logo"><img src="assets/img/arch_in.png" alt="Arch In logo" class="logo"></a>
+      <ul class="nav__menu" id="site-menu">
         <li><a href="index.html" class="nav__link">Home</a></li>
         <li><a href="services.html" class="nav__link">Services</a></li>
         <li><a href="projects.html" class="nav__link">Projects</a></li>
@@ -25,6 +27,8 @@
       </ul>
     </nav>
   </header>
+
+  <div class="menu-backdrop" aria-hidden="true"></div>
 
   <section class="hero hero--contact hero--sub">
     <div class="container hero__content">
@@ -61,7 +65,7 @@
 
       <div class="contact__info">
         <article class="contact__item">
-          <div class="contact__icon">PH</div>
+          <div class="contact__icon"><img src="assets/img/icon-phone.svg" alt="Phone icon" class="contact__icon-img"></div>
           <div>
             <h3>Phone</h3>
             <a class="contact__link" href="tel:+919876543210">+91 98765 43210</a>
@@ -69,21 +73,21 @@
           </div>
         </article>
         <article class="contact__item">
-          <div class="contact__icon">EM</div>
+          <div class="contact__icon"><img src="assets/img/icon-email.svg" alt="Email icon" class="contact__icon-img"></div>
           <div>
             <h3>Email</h3>
             <a class="contact__link" href="mailto:hello@archin.in">hello@archin.in</a>
           </div>
         </article>
         <article class="contact__item">
-          <div class="contact__icon">OF</div>
+          <div class="contact__icon"><img src="assets/img/icon-office.svg" alt="Office icon" class="contact__icon-img"></div>
           <div>
             <h3>Office</h3>
             <p>Arch In Studio, MG Road, Kochi, Kerala</p>
           </div>
         </article>
         <article class="contact__item">
-          <div class="contact__icon">SM</div>
+          <div class="contact__icon"><img src="assets/img/icon-social.svg" alt="Social icon" class="contact__icon-img"></div>
           <div>
             <h3>Social</h3>
             <div class="social__links">
@@ -100,7 +104,9 @@
     <div class="container">
       <h2 class="section__title">Visit Our Studio</h2>
       <p class="section__lead">We also support on-site meetings at your project location.</p>
-      <div id="map" class="map-container"></div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.887818882631!2d76.30994617488443!3d10.026115290080652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080dac322b1bfb%3A0xfe031e0e131d0eaf!2sParutheli%20Junction%2C%20Paruthelipalam%2C%20Marottichuvadu%2C%20Edappally%2C%20Ernakulam%2C%20Kochi%2C%20Kerala%20682024!5e0!3m2!1sen!2sin!4v1772127099668!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </section>
 
@@ -111,39 +117,47 @@
     </div>
   </section>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
       <div class="footer__content">
         <div class="footer__section">
-          <img src="assets/img/arch_in.jpg" alt="Arch In logo" class="logo">
+          <img src="assets/img/arch_in.png" alt="Arch In logo" class="logo footer__logo">
+          <h3>Company</h3>
+          <p>Arch In Developers Pvt. Ltd.</p>
           <p>Architecture, interior design and construction for modern spaces.</p>
+          <p>Kochi, Kerala, India</p>
         </div>
         <div class="footer__section">
           <h3>Contact</h3>
-          <p>Phone: +91 98765 43210</p>
-          <p>Email: hello@archin.in</p>
+          <p><a href="tel:+919633278615">+91 96332 78615</a></p>
+          <p><a href="mailto:info@archindevelopers.com">info@archindevelopers.com</a></p>
+          <p><a href="mailto:archindevelopers.in@gmail.com">archindevelopers.in@gmail.com</a></p>
+          <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
         </div>
         <div class="footer__section">
-          <h3>Quick Links</h3>
-          <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
-          <a href="about.html">About</a>
+          <h3>Social Media</h3>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><img src="assets/img/social-instagram.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><img src="assets/img/social-facebook.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+            <a href="archindevelopers.com" class="footer__social-link" aria-label="website"><img src="assets/img/social-website.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+          </div>
+          <p class="footer__social-note">Follow us for project updates.</p>
         </div>
       </div>
       <div class="footer__bottom"><p>&copy; 2026 Arch In. All rights reserved.</p></div>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    setTimeout(function () {
-      var map = L.map('map').setView([9.9816, 76.2999], 12);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
-      L.marker([9.9816, 76.2999]).addTo(map).bindPopup('Arch In Studio, Kochi').openPopup();
-    }, 150);
-  </script>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

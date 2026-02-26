@@ -13,8 +13,11 @@
 <body>
   <header class="header">
     <nav class="nav container">
-      <a href="index.html" class="nav__logo"><img src="assets/img/arch_in.jpg" alt="Arch In logo" class="logo"></a>
-      <ul class="nav__menu">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav__logo"><img src="assets/img/arch_in.png" alt="Arch In logo" class="logo"></a>
+      <ul class="nav__menu" id="site-menu">
         <li><a href="index.html" class="nav__link">Home</a></li>
         <li><a href="services.html" class="nav__link">Services</a></li>
         <li><a href="projects.html" class="nav__link">Projects</a></li>
@@ -24,6 +27,8 @@
       </ul>
     </nav>
   </header>
+
+  <div class="menu-backdrop" aria-hidden="true"></div>
 
   <section class="hero hero--process hero--sub">
     <div class="container hero__content">
@@ -74,27 +79,41 @@
     </div>
   </section>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
       <div class="footer__content">
         <div class="footer__section">
-          <img src="assets/img/arch_in.jpg" alt="Arch In logo" class="logo">
+          <img src="assets/img/arch_in.png" alt="Arch In logo" class="logo footer__logo">
+          <h3>Company</h3>
+          <p>Arch In Developers Pvt. Ltd.</p>
           <p>Architecture, interior design and construction for modern spaces.</p>
+          <p>Kochi, Kerala, India</p>
         </div>
         <div class="footer__section">
           <h3>Contact</h3>
-          <p>Phone: +91 98765 43210</p>
-          <p>Email: hello@archin.in</p>
+          <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p><a href="mailto:hello@archin.in">hello@archin.in</a></p>
+          <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
         </div>
         <div class="footer__section">
-          <h3>Quick Links</h3>
-          <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
-          <a href="about.html">About</a>
+          <h3>Social Media</h3>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><img src="assets/img/social-instagram.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><img src="assets/img/social-facebook.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn"><img src="assets/img/social-linkedin.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><img src="assets/img/social-youtube.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+          </div>
+          <p class="footer__social-note">Follow us for project updates.</p>
         </div>
       </div>
       <div class="footer__bottom"><p>&copy; 2026 Arch In. All rights reserved.</p></div>
     </div>
   </footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

@@ -13,10 +13,13 @@
 <body>
   <header class="header">
     <nav class="nav container">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span><span></span><span></span>
+      </button>
       <a href="index.html" class="nav__logo">
-        <img src="assets/img/" alt="Arch In logo" class="logo">
+        <img src="assets/img/arch_in.png" alt="Arch In logo" class="logo">
       </a>
-      <ul class="nav__menu">
+      <ul class="nav__menu" id="site-menu">
         <li><a href="index.html" class="nav__link active">Home</a></li>
         <li><a href="services.html" class="nav__link">Services</a></li>
         <li><a href="projects.html" class="nav__link">Projects</a></li>
@@ -27,11 +30,13 @@
     </nav>
   </header>
 
+  <div class="menu-backdrop" aria-hidden="true"></div>
+
   <section class="hero hero--home">
     <div class="container hero__content">
       <span class="hero__eyebrow">Design. Build. Deliver.</span>
-      <h1 class="hero__title">Professional Interior, Construction and Architecture Solutions</h1>
-      <p class="hero__text">We create high-performance spaces that are elegant, practical and built for long-term value. One team handles planning, design, execution and handover.</p>
+      <h1 class="hero__title">Strong Foundations, Smart Design</h1>
+      <p class="hero__text">Archin Developers transforms ideas into durable, modern spaces crafted with excellence and care.</p>
       <div class="hero__buttons">
         <a href="projects.html" class="btn btn--primary">View Projects</a>
         <a href="contact.html" class="btn btn--secondary">Book Consultation</a>
@@ -42,7 +47,7 @@
   <section class="stats">
     <div class="container stats__grid">
       <div class="stat"><div class="stat__number">120+</div><div class="stat__label">Projects Delivered</div></div>
-      <div class="stat"><div class="stat__number">12+</div><div class="stat__label">Years Team Experience</div></div>
+      <div class="stat"><div class="stat__number">17+</div><div class="stat__label">Years Team Experience</div></div>
       <div class="stat"><div class="stat__number">96%</div><div class="stat__label">On-time Completion</div></div>
       <div class="stat"><div class="stat__number">1</div><div class="stat__label">Single Point Accountability</div></div>
     </div>
@@ -54,19 +59,28 @@
       <p class="section__lead">Complete project lifecycle support for residential, commercial and mixed-use spaces.</p>
       <div class="services__grid">
         <article class="service__card card">
-          <div class="service__icon">AR</div>
-          <h3>Architecture</h3>
-          <p>Site planning, concept development, technical drawings and authority-ready documentation.</p>
+          <h3>Residential Construction</h3>
+          <p>We build durable, modern homes with quality craftsmanship.</p>
         </article>
         <article class="service__card card">
-          <div class="service__icon">IN</div>
+          <h3>Commercial Building Projects</h3>
+          <p>We deliver strong, functional commercial spaces built for growth.</p>
+        </article>
+        <article class="service__card card">
+          <h3>Renovation & Remodeling</h3>
+          <p>We transform existing spaces into stylish and practical environments.</p>
+        </article>
+        <article class="service__card card">
+          <h3>Project Management & Supervision</h3>
+          <p>We ensure smooth execution, quality control, and timely completion.</p>
+        </article>
+        <article class="service__card card">
+          <h3>Cost Estimation & Budget Planning</h3>
+          <p>We provide accurate budgeting for efficient and cost-effective projects.</p>
+        </article>
+        <article class="service__card card">
           <h3>Interior Design</h3>
-          <p>Space planning, material palettes, lighting design and furniture concepts tailored to your goals.</p>
-        </article>
-        <article class="service__card card">
-          <div class="service__icon">CN</div>
-          <h3>Construction</h3>
-          <p>Civil works, structural execution, MEP coordination and site supervision with strict quality control.</p>
+          <p>We create elegant and functional interior spaces tailored to your lifestyle and vision.</p>
         </article>
       </div>
       <a href="services.html" class="btn btn--primary">Explore All Services</a>
@@ -79,7 +93,7 @@
       <p class="section__lead">Selected projects that reflect our standards in detailing, execution discipline and user-focused design.</p>
       <div class="projects__grid">
         <article class="project__card card">
-          <img src="assets/img/project1.jpg" class="project__img" alt="Modern villa interior">
+          <img src="assets/img/project1.jpeg" class="project__img" alt="Modern villa interior">
           <div class="project__content">
             <h3>Private Villa Residence</h3>
             <p>Full architecture and interiors for a premium multi-level family home.</p>
@@ -87,18 +101,18 @@
           </div>
         </article>
         <article class="project__card card">
-          <img src="assets/img/project2.jpg" class="project__img" alt="Corporate office interior">
+          <img src="assets/img/project2.jpeg" class="project__img" alt="Corporate office interior">
           <div class="project__content">
-            <h3>Corporate Office Fitout</h3>
-            <p>End-to-end planning and execution for a productivity-focused workplace.</p>
+            <h3>Modern Interior Styling</h3>
+            <p>Complete interior solutions designed for comfort, style, and modern living.</p>
             <span class="project__type">Commercial</span>
           </div>
         </article>
         <article class="project__card card">
-          <img src="assets/img/project3.jpg" class="project__img" alt="Boutique hospitality space">
+          <img src="assets/img/project3.jpeg" class="project__img" alt="Boutique hospitality space">
           <div class="project__content">
-            <h3>Boutique Hospitality Space</h3>
-            <p>Design-build package with brand-led interiors and high-efficiency construction.</p>
+            <h3>Full Living Room Renovation</h3>
+            <p>End-to-end renovation to transform your living room into a modern and comfortable space.</p>
             <span class="project__type">Hospitality</span>
           </div>
         </article>
@@ -150,29 +164,41 @@
     </div>
   </section>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
       <div class="footer__content">
         <div class="footer__section">
-          <img src="assets/img/arch." alt="Arch In logo" class="logo">
+          <img src="assets/img/arch_in.png" alt="Arch In logo" class="logo footer__logo">
+          <h3>Company</h3>
+          <p>Arch In Developers Pvt. Ltd.</p>
           <p>Architecture, interior design and construction for modern spaces.</p>
+          <p>Kochi, Kerala, India</p>
         </div>
         <div class="footer__section">
           <h3>Contact</h3>
-          <p>Phone: +91 98765 43210</p>
-          <p>Email: hello@archin.in</p>
+          <p><a href="tel:+919633278615">+91 96332 78615</a></p>
+          <p><a href="mailto:info@archindevelopers.com">info@archindevelopers.com</a></p>
+          <p><a href="mailto:archindevelopers.in@gmail.com">archindevelopers.in@gmail.com</a></p>
+          <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
         </div>
         <div class="footer__section">
-          <h3>Quick Links</h3>
-          <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html">Contact</a>
+          <h3>Social Media</h3>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><img src="assets/img/social-instagram.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><img src="assets/img/social-facebook.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+            <a href="archindevelopers.com" class="footer__social-link" aria-label="website"><img src="assets/img/social-website.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+          </div>
+          <p class="footer__social-note">Follow us for project updates.</p>
         </div>
       </div>
-      <div class="footer__bottom">
-        <p>&copy; 2026 Arch In. All rights reserved.</p>
-      </div>
+      <div class="footer__bottom"><p>&copy; 2026 Arch In. All rights reserved.</p></div>
     </div>
   </footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

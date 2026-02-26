@@ -13,8 +13,11 @@
 <body>
   <header class="header">
     <nav class="nav container">
-      <a href="index.html" class="nav__logo"><img src="assets/img/arch_in.jpg" alt="Arch In logo" class="logo"></a>
-      <ul class="nav__menu">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav__logo"><img src="assets/img/arch_in.png" alt="Arch In logo" class="logo"></a>
+      <ul class="nav__menu" id="site-menu">
         <li><a href="index.html" class="nav__link">Home</a></li>
         <li><a href="services.html" class="nav__link active">Services</a></li>
         <li><a href="projects.html" class="nav__link">Projects</a></li>
@@ -24,6 +27,8 @@
       </ul>
     </nav>
   </header>
+
+  <div class="menu-backdrop" aria-hidden="true"></div>
 
   <section class="hero hero--services hero--sub">
     <div class="container hero__content">
@@ -36,14 +41,14 @@
   <section class="service-detail section">
     <div class="container service-detail__content">
       <div class="service-detail__text">
-        <h2>Architecture and Planning</h2>
-        <p>We design spaces that are context-aware, functional and ready for execution. Every project starts with clear planning and technical validation.</p>
-        <ul>
-          <li>Site feasibility and concept planning</li>
-          <li>Floor plans, elevations and 3D studies</li>
-          <li>Permit and approval coordination support</li>
-          <li>Design development with build-ready drawings</li>
-        </ul>
+        <h2>Residential Construction</h2>
+        <p>We build durable and modern homes designed for comfort, safety, and long-term value. Every project begins with careful planning and quality construction standards.</p>
+          <ul>
+            <li>Custom home construction</li>
+            <li>Structural work and foundation development</li>
+            <li>High-quality materials and finishing</li>
+            <li>On-time project execution and supervision</li>
+          </ul>
         <a href="contact.html" class="btn btn--primary">Discuss Architecture Scope</a>
       </div>
       <div class="service-detail__image"><img src="assets/img/home-interior.jpg" alt="Architecture planning"></div>
@@ -54,14 +59,14 @@
     <div class="container service-detail__content">
       <div class="service-detail__image"><img src="assets/img/turnkey-interior.jpg" alt="Interior design"></div>
       <div class="service-detail__text">
-        <h2>Interior Design and Turnkey Fitout</h2>
-        <p>We create interior environments that reflect your identity and support day-to-day function, then execute everything through our managed fitout workflow.</p>
-        <ul>
-          <li>Space planning and zoning strategy</li>
-          <li>Material and finish specification</li>
-          <li>Custom furniture and storage design</li>
-          <li>Turnkey execution with milestone tracking</li>
-        </ul>
+        <h2>Commercial Building Projects</h2>
+        <p>We construct high-quality commercial buildings designed for efficiency, durability, and business growth. Our approach ensures structural strength, modern design, and timely project delivery.</p>
+          <ul>
+            <li>Office buildings and retail spaces</li>
+            <li>Structural engineering and compliance</li>
+            <li>Efficient space planning and layout</li>
+            <li>End-to-end project management</li>
+          </ul>
         <a href="contact.html" class="btn btn--primary">Plan Interior Project</a>
       </div>
     </div>
@@ -70,14 +75,14 @@
   <section class="service-detail section">
     <div class="container service-detail__content">
       <div class="service-detail__text">
-        <h2>Construction and Project Management</h2>
-        <p>Our construction team converts approved designs into reliable built outcomes through rigorous coordination and quality checks.</p>
-        <ul>
-          <li>Civil and structural works</li>
-          <li>MEP execution coordination</li>
-          <li>Site supervision and quality reporting</li>
-          <li>Timeline control and risk monitoring</li>
-        </ul>
+        <h2>Renovation & Remodeling</h2>
+        <p>We upgrade and transform existing spaces to enhance functionality, style, and value. Our renovation solutions focus on modern design, structural improvement, and seamless execution.</p>
+          <ul>
+            <li>Complete home and office renovations</li>
+            <li>Layout modifications and space redesign</li>
+            <li>Structural repairs and upgrades</li>
+            <li>Interior and exterior remodeling</li>
+          </ul>
         <a href="contact.html" class="btn btn--primary">Start Construction Planning</a>
       </div>
       <div class="service-detail__image"><img src="assets/img/civil-construction.jpg" alt="Construction execution"></div>
@@ -88,14 +93,48 @@
     <div class="container service-detail__content">
       <div class="service-detail__image"><img src="assets/img/renovation.jpg" alt="Renovation and retrofit"></div>
       <div class="service-detail__text">
-        <h2>Renovation and Retrofit</h2>
-        <p>We transform existing spaces with minimal disruption while improving usability, efficiency and visual quality.</p>
-        <ul>
-          <li>Condition assessment and redesign options</li>
-          <li>Phased renovation planning</li>
-          <li>Structural and interior upgrades</li>
-          <li>Services modernization and finishing works</li>
-        </ul>
+        <h2>Project Management & Supervision</h2>
+        <p>We oversee every stage of the project to ensure smooth coordination, quality control, and timely completion. Our management approach guarantees efficiency, transparency, and adherence to standards.</p>
+          <ul>
+            <li>Complete project planning and scheduling</li>
+            <li>Site supervision and quality assurance</li>
+            <li>Vendor and workforce coordination</li>
+            <li>Timeline and budget monitoring</li>
+          </ul>
+        <a href="contact.html" class="btn btn--primary">Request Renovation Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-detail section">
+    <div class="container service-detail__content">
+      <div class="service-detail__text">
+        <h2>Cost Estimation & Budget Planning</h2>
+        <p>We provide detailed cost analysis and strategic budget planning to ensure financial clarity and control. Our approach helps prevent unexpected expenses while maximizing project value.</p>
+          <ul>
+            <li>Accurate project cost estimation</li>
+            <li>Material and labor cost analysis</li>
+            <li>Budget forecasting and planning</li>
+            <li>Cost control and financial monitoring</li>
+          </ul>
+        <a href="contact.html" class="btn btn--primary">Start Construction Planning</a>
+      </div>
+      <div class="service-detail__image"><img src="assets/img/civil-construction.jpg" alt="Construction execution"></div>
+    </div>
+  </section>
+
+  <section class="service-detail section alternate-bg">
+    <div class="container service-detail__content">
+      <div class="service-detail__image"><img src="assets/img/renovation.jpg" alt="Renovation and retrofit"></div>
+      <div class="service-detail__text">
+        <h2>Interior Design</h2>
+        <p>We create functional and elegant interior spaces that reflect your style and purpose. Our designs combine creativity, comfort, and practical execution for lasting impact.</p>
+          <ul>
+            <li>Residential and commercial interior design</li>
+            <li>Space planning and layout optimization</li>
+            <li>Material selection and finishing details</li>
+            <li>Turnkey interior project execution</li>
+          </ul>
         <a href="contact.html" class="btn btn--primary">Request Renovation Consultation</a>
       </div>
     </div>
@@ -108,27 +147,41 @@
     </div>
   </section>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
       <div class="footer__content">
         <div class="footer__section">
-          <img src="assets/img/arch_in.jpg" alt="Arch In logo" class="logo">
+          <img src="assets/img/arch_in.png" alt="Arch In logo" class="logo footer__logo">
+          <h3>Company</h3>
+          <p>Arch In Developers Pvt. Ltd.</p>
           <p>Architecture, interior design and construction for modern spaces.</p>
+          <p>Kochi, Kerala, India</p>
         </div>
         <div class="footer__section">
           <h3>Contact</h3>
-          <p>Phone: +91 98765 43210</p>
-          <p>Email: hello@archin.in</p>
+          <p><a href="tel:+919633278615">+91 96332 78615</a></p>
+          <p><a href="mailto:info@archindevelopers.com">info@archindevelopers.com</a></p>
+          <p><a href="mailto:archindevelopers.in@gmail.com">archindevelopers.in@gmail.com</a></p>
+          <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
         </div>
         <div class="footer__section">
-          <h3>Quick Links</h3>
-          <a href="projects.html">Projects</a>
-          <a href="process.html">Process</a>
-          <a href="about.html">About</a>
+          <h3>Social Media</h3>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><img src="assets/img/social-instagram.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><img src="assets/img/social-facebook.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+            <a href="archindevelopers.com" class="footer__social-link" aria-label="website"><img src="assets/img/social-website.svg" alt="" class="footer__social-icon" aria-hidden="true"></a>
+          </div>
+          <p class="footer__social-note">Follow us for project updates.</p>
         </div>
       </div>
       <div class="footer__bottom"><p>&copy; 2026 Arch In. All rights reserved.</p></div>
     </div>
   </footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
