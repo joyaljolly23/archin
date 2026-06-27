@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Projects Gallery | Arch In</title>
+  <meta name="description" content="A simple image gallery of Arch In best projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --ink: #222;
+      --card: #fff;
+      --accent: #9f7b53;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .gallery-page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .topbar h1 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+    }
+    .topbar a {
+      text-decoration: none;
+      color: #fff;
+      background: var(--accent);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .section-title {
+      margin: 28px 0 12px;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #5a5a5a;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .image-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+      background: var(--card);
+    }
+  </style>
+</head>
+<body>
+  <main class="gallery-page">
+    <div class="topbar">
+      <h1>Our Best Projects</h1>
+      <a href="../projects.html">Back to Projects</a>
+    </div>
+
+    <h2 class="section-title">Living Room</h2>
+    <section class="image-grid">
+      <img src="../assets/img/project1.jpeg" alt="Living room project 1">
+      <img src="../assets/img/project2.jpeg" alt="Living room project 2">
+      <img src="../assets/img/project3.jpeg" alt="Living room project 3">
+    </section>
+
+    <h2 class="section-title">Bathroom</h2>
+    <section class="image-grid">
+      <img src="../assets/img/interior.jpg" alt="Bathroom project 1">
+      <img src="../assets/img/renovation.jpg" alt="Bathroom project 2">
+      <img src="../assets/img/project.jpg" alt="Bathroom project 3">
+    </section>
+
+    <h2 class="section-title">Bedroom</h2>
+    <section class="image-grid">
+      <img src="../assets/img/juno-jo-Um4iB59lS2A-unsplash.jpg" alt="Bedroom project 1">
+      <img src="../assets/img/project1.jpeg" alt="Bedroom project 2">
+      <img src="../assets/img/project2.jpeg" alt="Bedroom project 3">
+    </section>
+
+    <h2 class="section-title">Commercial</h2>
+    <section class="image-grid">
+      <img src="../assets/img/construction.jpg" alt="Commercial project 1">
+      <img src="../assets/img/management.jpg" alt="Commercial project 2">
+      <img src="../assets/img/money.jpg" alt="Commercial project 3">
+    </section>
+
+    <h2 class="section-title">Renovation</h2>
+    <section class="image-grid">
+      <img src="../assets/img/renovation.jpg" alt="Renovation project 1">
+      <img src="../assets/img/project3.jpeg" alt="Renovation project 2">
+      <img src="../assets/img/project.jpg" alt="Renovation project 3">
+    </section>
+  </main>
+</body>
+</html>
